@@ -1,0 +1,52 @@
+{
+  "name": "xdraw",
+  "version": "",
+  "private": true,
+  "scripts": {
+    "start": "npm run client-watch & npm run server-start",
+    "server-start": "./node_modules/.bin/node-supervisor -x coffee --watch server,fixtures,server.coffee server.coffee",
+    "client-watch": "./node_modules/.bin/watchify client/start.coffee -o client/bundle.js --extension=.coffee --verbose"
+  },
+  "dependencies": {
+    "ainojs-animation": "^1.1.7",
+    "ainojs-easing": "^1.0.2",
+    "detect-dom-ready": "~1.0.2",
+    "errorhandler": "~1.1.1",
+    "express": "~4.8.5",
+    "hbs": "~2.7.0",
+    "lodash": "~2.4.1",
+    "moment": "^2.8.3",
+    "react": "~0.11.1",
+    "react-input-placeholder": "^0.1.3",
+    "react-router": "^0.9.5",
+    "serve-favicon": "~2.1.1",
+    "serve-static": "~1.5.3"
+  },
+  "devDependencies": {
+    "aliasify": "^1.4.0",
+    "autoprefixer-stylus": "~0.3.0",
+    "browserify": "^6.2.0",
+    "coffee-script": "~1.7.1",
+    "coffeeify": "~0.7.0",
+    "envify": "^3.0.0",
+    "http-proxy": "~1.3.0",
+    "stylus": "~0.49.1",
+    "supervisor": "^0.6.0",
+    "watchify": "~1.0.2"
+  },
+  "aliasify": {
+    "aliases": {
+      "moment": "moment/min/moment.min",
+      "lodash": "lodash/dist/lodash.compat.min",
+      "ainojs-animation": "ainojs-animation/dist/animation.min",
+      "ainojs-easing": "ainojs-easing/dist/easing.min"
+    }
+  },
+  "browserify": {
+    "transform": [
+      "coffeeify",
+      "envify",
+      "aliasify"
+    ]
+  }
+}
