@@ -1,0 +1,172 @@
+html,
+body
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif
+  overflow: hidden
+  font-size: 13px
+
+.container
+  absPos(top: 0, right: 0, bottom: 0, left: 0)
+  overflow: hidden
+
+.menu
+  absPos(top: 0, bottom: 0, left: -300px)
+  width: 300px
+  oveflow-y: auto
+  overflow-x: hidden
+  background: canvas2
+  transition: left .2s ease-out
+  &.menu-open
+    left: 0px
+
+ul
+  list-style-type: none
+  padding: 0px
+  margin: 0px
+ 
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"]
+  cursor: pointer
+  -webkit-appearance: button
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+button
+  background: transparent
+  border: none
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+.prmy
+  color: forwardTextLink
+  height: 28px
+  text-align: center
+  line-height: 26px
+  margin-top: 3px
+  font-size: 13px
+
+.prmy-right
+  float: right
+
+.prmy-left
+  float: left
+  
+
+.btn-plus-minus
+  width: 16px
+  height: 16px
+  border-radius: 8px
+  background-size: 12px
+  background-repeat: no-repeat
+  background-position: center center
+  border: 1px solid forward1
+  &.minus
+    background-image: url('../images/blue_minus.svg')
+  &.plus
+    background-image: url('../images/blue_plus.svg')
+  &.left
+    absPos(top: 50%, left: 5px)
+    margin-top: -8px
+
+input
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  outline: none
+  border: 1px solid forward1
+  color: textColor2
+  font-size: 13px
+  padding-left: 5px
+  
+
+textarea
+  padding: 5px
+  margin: 0px 10px 0px 0px
+  outline: none
+  border: 1px solid forward1
+  color: textColor2
+  font-size: 13px
+
+
+.primary-nav1
+  display: block
+  border-width: 1px
+  border-type: solid
+  border-bottom-color: primaryNavBorder
+  border-top-color: primaryNavBorder
+  border-right-color: primaryNavBorder
+  border-left-color: primaryNavBorder
+  background-color: primaryNav1
+  border: 1px solid forward2
+  height: 30px
+  line-height: 18px
+  color: forward4
+  cursor: pointer
+  padding: 5px
+
+input.placeholder, textarea.placeholder
+  color: textColor3
+
+::-webkit-input-placeholder
+  color: textColor3
+:-moz-placeholder
+  color: textColor3 
+::-moz-placeholder
+  color: textColor3
+:-ms-input-placeholder
+  color: textColor3
+
+.logout-btn
+  absPos(top: 0px, right: 0px, left: 0px)
+  height: 34px
+  width: 300px
+  font-size: 13px
+  text-align: right
+  padding-right: 32px
+  color: textColor2
+  line-height: 24px
+  background: canvas1 url('../images/io.svg') 272px no-repeat
+  background-size: 20px
+.logout-btn:hover
+  background-color: canvasHover1
+  
+
+
+.list-section
+  background-color: forward2
+  color: forwardText2
+  padding-left: 10px
+  padding-top: 10px
+  text-transform: uppercase
+  margin: 0px
+  font-size: 12px
+  height: 16px
+
+.module-list
+  absPos(top: 34px, right: 0px, left: 0px, bottom: 0px)
+  list-style-type: none
+  padding: 0px
+  margin: 0px
+
+.module-list li
+  width: 300px
+  height: 14px
+  background: canvas3
+  padding: 10px
+  line-height: 14px
+  font-size: 14px
+  color: textColor2
+  border-top: 1px solid white
+  border-bottom: 1px solid forward1
+  cursor: pointer
+  &.is-selected
+    background-color: canvasSelected3
+    border-top: 1px solid forward1
+
+
+
+
